@@ -1,0 +1,3 @@
+graft restaurantinfo/templates
+graft restaurantinfo/static
+include restaurantinfo/restaurantdata.py
