@@ -3,6 +3,18 @@
 
 <h2>Info for {{ restaurant_name }}:</h2>
 
-Placeholder for restaurant information.
+<h3>Hours</h3>
+<table>
+<tr><td>Sunday:</td><td>{{ restaurant_info['hours']['SUN'] }}</td></tr>
+<tr><td>Monday:</td><td>{{ restaurant_info['hours']['MON'] }}</td></tr>
+<tr><td>Tuesday:</td><td>{{ restaurant_info['hours']['TUE'] }}</td></tr>
+<tr><td>Wednesday:</td><td>{{ restaurant_info['hours']['WED'] }}</td></tr>
+<tr><td>Thursday:</td><td>{{ restaurant_info['hours']['THU'] }}</td></tr>
+<tr><td>Friday:</td><td>{{ restaurant_info['hours']['FRI'] }}</td></tr>
+<tr><td>Saturday:</td><td>{{ restaurant_info['hours']['SAT'] }}</td></tr>
+</table>
+
+<h3>Address</h3>
+{{ restaurant_info['address'] }}
 
 {% endblock %}

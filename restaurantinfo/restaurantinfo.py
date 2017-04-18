@@ -1,3 +1,4 @@
+import urllib
 from random import choice
 from flask import Flask, request, redirect, url_for, abort, \
     render_template
