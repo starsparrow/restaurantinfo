@@ -27,7 +27,7 @@ def welcome():
 
 @app.route('/<restaurant_name>')
 def view_restaurant_info(restaurant_name):
-    if urllib.decode(restaurant_name, 'utf8') in restaurantdata.restaurants:
+    if urllib.parse.unquote(restaurant_name) in restaurantdata.restaurants:
         return render_template('info.html',
                                 restaurant_name=restaurant_name,
                                 restaurant_info=restaurantdata.restaurants[restaurant_name]
