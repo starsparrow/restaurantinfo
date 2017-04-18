@@ -1,0 +1,12 @@
+{% extends "layout.html"  %}
+{% block body %}
+
+<h2>Welcome! Please select from the list of restaurants below:</h2>
+
+{% for restaurant in restaurants %}
+
+<p>{{ restaurant }}</p>
+
+{% endfor %}
+
+{% endblock %}

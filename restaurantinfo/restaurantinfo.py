@@ -18,7 +18,10 @@ def welcome():
     if len(restaurantdata.restaurants) == 0:
         return "Hello! There are no restaurants configured for this network. Please check back later."
     else:
-        return "Welcome! Please select a restaurant from the list below."
+        restaurants = []
+        for restaurant in restaurantdata.restaurants:
+            restaurants.append(restaurant)
+        return render_template('list.html', restaurants=restaurants)
  
 
 @app.route('/<restaurant_name>')
